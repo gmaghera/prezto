@@ -11,4 +11,55 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+alias sp1="ssh gmaghera@psdevserver.powerschool.com"
+alias sp4="ssh gmaghera@perforce.powerschool.com"
+alias sp5="ssh gmaghera@10.40.227.52"
+alias sp6="ssh maghga@10.40.227.61"
+alias sp7="ssh builder@devfileserver.powerschool.com"
+alias ftp4="ftp -A ftp://anonymous:gabor.maghera%40pearson.com@ftp.perforce.com"
+alias hgrep="history 1 -1 | grep"
+alias p4v="/Applications/p4v.app/Contents/MacOS/p4v"
+alias git="/usr/local/git/bin/git"
+alias sshBitnami="ssh -i $HOME/.ssh/bitnami-hosting.pem bitnami@ontracked.bitnamiapp.com"
 
+export PATH="/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/apache-maven-2.2.1/bin:/usr/local/atlassian-plugin-sdk-3.6.1/bin:/usr/local/atlassian-cli-2.4.0:/Users/maghga/bin:/Users/maghga/Development/Scripting:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/djangostack-1.4.2-1/apps/django/bin:/Applications/djangostack-1.4.2-1/python/bin:/Applications/djangostack-1.4.2-1/postgresql/bin:/Applications/djangostack-1.4.2-1/mysql/bin:/Applications/djangostack-1.4.2-1/sqlite/bin:/Applications/djangostack-1.4.2-1/apache2/bin:/Applications/djangostack-1.4.2-1/common/bin:$PATH"
+
+# Build tools
+export ANT_OPTS="-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m"
+export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m -Xss1m"
+export M2_HOME="/usr/local/bin/apache-maven-2.2.1"
+export M2="$M2_HOME/bin"
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home'
+export GROOVY_HOME="/usr/local/Cellar/groovy/2.0.5/libexec"
+
+# Atlassian CLI
+export ATL_CLI="/usr/local/atlassian-cli-2.4.0"
+
+# Atlassian SDK
+export ATL_SDK="/usr/local/atlassian-plugin-sdk-3.6.1/bin"
+
+# Perforce settings
+export P4CONFIG=".p4config"
+export P4MERGE="/usr/local/bin/mymerge.sh"
+export P4DIFF="/usr/local/bin/mymerge.sh"
+
+# Node path for picking npm lbrarios from
+export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
+
+# Set up support for .zsh_nocorrect file.
+if [ -f $HOME/.zsh_nocorrect ]; then
+    while read -r COMMAND; do
+        alias $COMMAND="nocorrect $COMMAND"
+    done < $HOME/.zsh_nocorrect
+fi
+
+# Disable globbing for certain commands
+alias p4sandbox="noglob /usr/local/bin/p4sandbox"
+alias p4vc="noglob /usr/local/bin/p4vc"
+alias p4="noglob p4"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Fisheye instance
+FISHEYE_INST="/Users/maghga/fisheye-home"
+export FISHEYE_INST
