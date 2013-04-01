@@ -11,6 +11,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Set prompt theme
+prompt steeef
+
+# Set FPATH up to support zsh-completions (installed via Homebrew),
+# and custom completions as well.
+# NOTE: This has to be set prior to compinit being called
+fpath=(/Users/maghga/completions
+       /usr/local/share/zsh-completions
+       $fpath)
+
 alias sp1="ssh gmaghera@psdevserver.powerschool.com"
 alias sp4="ssh gmaghera@perforce.powerschool.com"
 alias sp5="ssh gmaghera@10.40.227.52"
