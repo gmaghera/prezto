@@ -54,8 +54,11 @@ export P4CONFIG=".p4config"
 export P4MERGE="/usr/local/bin/mymerge.sh"
 export P4DIFF="/usr/local/bin/mymerge.sh"
 
-# Node path for picking npm lbrarios from
-export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
+# Node path for picking npm libraries from
+export NODE_PATH="/usr/local/share/npm/lib/node_modules"
+
+# Prepend node binary path to system path
+export PATH="/usr/local/share/npm/bin:$PATH"
 
 # Set up support for .zsh_nocorrect file.
 if [ -f $HOME/.zsh_nocorrect ]; then
