@@ -77,3 +77,6 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # Fisheye instance
 FISHEYE_INST="/Users/maghga/fisheye-home"
 export FISHEYE_INST
+
+# PYTHON
+export PYTHONSTARTUP=~/.pystartup
