@@ -32,10 +32,15 @@ alias sp6="ssh maghga@10.40.227.61"
 alias sp7="ssh builder@devfileserver.powerschool.com"
 alias ftp4="ftp -A ftp://anonymous:gabor.maghera%40pearson.com@ftp.perforce.com"
 alias hgrep="history 1 -1 | grep"
-alias p4v="/Applications/p4v.app/Contents/MacOS/p4v"
 alias git="/usr/local/git/bin/git"
 alias sshBitnami="ssh -i $HOME/.ssh/bitnami-hosting.pem bitnami@ontracked.bitnamiapp.com"
 
+# Use MacVim instead of vim
+alias vim="mvim -v"
+alias vi="mvim -v"
+alias vimdiff="mvimdiff -v"
+
+# Set PATH
 export PATH="/Applications/Postgres.app/Contents/MacOS/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin/apache-maven-2.2.1/bin:/usr/local/atlassian-plugin-sdk-3.6.1/bin:/usr/local/atlassian-cli-2.4.0:/Users/maghga/bin:/Users/maghga/Development/Scripting:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/djangostack-1.4.2-1/apps/django/bin:/Applications/djangostack-1.4.2-1/python/bin:/Applications/djangostack-1.4.2-1/postgresql/bin:/Applications/djangostack-1.4.2-1/mysql/bin:/Applications/djangostack-1.4.2-1/sqlite/bin:/Applications/djangostack-1.4.2-1/apache2/bin:/Applications/djangostack-1.4.2-1/common/bin:$PATH"
 
 # Build tools
